@@ -42,7 +42,7 @@
     "typescript": "^5.4.5"
   },
   "simple-git-hooks": {
-      "commit-msg": "pnpm commitlint",
+      "commit-msg": "npx --no-install commitlint --edit $1",
       "pre-commit": "pnpm typecheck && pnpm lint-staged"
   },
   "lint-staged": {
