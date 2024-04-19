@@ -1,0 +1,34 @@
+{
+  "name": "@linrui/admin-naive",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "progress": "^2.0.3",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^20.12.7",
+    "@types/progress": "^2.0.7",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "@vue/tsconfig": "^0.5.1",
+    "jsdom": "^24.0.0",
+    "sass": "^1.75.0",
+    "tsx": "^4.7.2",
+    "typescript": "^5.2.2",
+    "unocss": "^0.59.4",
+    "unplugin-vue-components": "^0.26.0",
+    "vite": "^5.2.0",
+    "vite-plugin-devtools": "^0.4.0",
+    "vite-plugin-progress": "^0.0.7",
+    "vitest": "^1.5.0",
+    "vue-tsc": "^2.0.6"
+  }
+}

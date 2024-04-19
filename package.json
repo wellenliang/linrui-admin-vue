@@ -1,15 +1,15 @@
 {
   "name": "linrui-admin-vue",
-  "version": "0.0.1",
   "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@9.0.2",
   "description": "base on vue build admin",
-  "keywords": [
-    "vue",
-    "admin",
-    "naive-ui",
-    "vuetify"
-  ],
-  "packageManager": "pnpm@8.15.6",
+  "author": {
+    "name": "wellenliang",
+    "email": "wellenliang@163.com"
+  },
+  "license": "MIT",
   "homepage": "https://github.com/wellenliang/linrui-admin-vue",
   "repository": {
     "type": "git",
@@ -18,12 +18,36 @@
   "bugs": {
     "url": "https:/github.com/wellenliang/linrui-admin-vue/issues"
   },
-  "author": {
-    "name": "wellenliang",
-    "email": "wellenliang@163.com"
+  "keywords": [
+    "vue",
+    "admin",
+    "naive-ui",
+    "vuetify"
+  ],
+  "scripts": {
+    "dev:lan": "pnpm run --filter @linrui/admin-naive dev",
+    "build:lan": "pnpm run --filter @linrui/admin-naive build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
-  "license": "MIT",
-  "scripts": {},
-  "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.15.0",
+    "@commitlint/cli": "^19.2.2",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@types/node": "^20.12.7",
+    "@unocss/eslint-plugin": "^0.59.3",
+    "eslint": "^9.0.0",
+    "lint-staged": "^15.2.2",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "^5.4.5"
+  },
+  "simple-git-hooks": {
+      "commit-msg": "",
+      "pre-commit": "pnpm typecheck && pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": [
+      "eslint --fix"
+    ]
+  }
 }
